@@ -1,0 +1,15 @@
+#!/bin/bash
+set -euxo pipefail
+
+# Creating home folder
+mkdir -p /home/terraform
+set-workdir /home/terraform
+cd /home/terraform
+
+# Add providers.tf and variables file
+curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/01-terraform-set-up/providers.tf -o /home/terraform/providers.tf
+curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/01-terraform-set-up/configuration.sh -o /home/terraform/configuration.sh
+curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/01-terraform-set-up/data-check.tf -o /home/terraform/data-check.tf
+
+# Automatically load the configuration file on new sessions
+echo "source  /home/terraform/configuration.sh" >> /root/.bashrc
