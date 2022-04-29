@@ -16,4 +16,7 @@ export NEW_RELIC_ACCOUNT_ID=""
 #
 export TF_VAR_NEW_RELIC_CHECK_ACCOUNT_ID="$NEW_RELIC_ACCOUNT_ID"
 export TF_VAR_NEW_RELIC_ACCOUNT_ID="$NEW_RELIC_ACCOUNT_ID"
-echo "Your New Relic Account ID is $NEW_RELIC_ACCOUNT_ID"
+
+if [ -n "$NEW_RELIC_ACCOUNT_ID" ]; then
+    echo "Your New Relic Account ID is $NEW_RELIC_ACCOUNT_ID"
+fi

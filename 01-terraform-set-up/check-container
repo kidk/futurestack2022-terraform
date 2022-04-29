@@ -1,4 +1,14 @@
 #!/bin/bash
 set -euxo pipefail
 
+if ! terraform init; then
+     fail-message "Terraform init failed, please check your providers file and try again"
+     exit 1
+fi
 
+if ! terraform plan; then
+     fail-message "Terraform plan failed, please check your credentials and try again"
+     exit 1
+fi
+
+exit 0
