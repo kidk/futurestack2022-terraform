@@ -10,10 +10,10 @@ notes:
 tabs:
 - title: Shell
   type: terminal
-  hostname: host
+  hostname: container
 - title: Editor
   type: code
-  hostname: host
+  hostname: container
   path: /home/terraform
 difficulty: basic
 timelimit: 600
