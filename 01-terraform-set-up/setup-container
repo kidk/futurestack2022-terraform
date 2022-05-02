@@ -19,4 +19,4 @@ curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/01-te
 curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/01-terraform-set-up/data-check.tf -o /home/terraform/data-check.tf
 
 # Automatically load the configuration file on new sessions
-echo "source  /home/terraform/configuration.sh" >> /root/.bashrc
+echo "source /home/terraform/configuration.sh" >> /root/.bashrc
