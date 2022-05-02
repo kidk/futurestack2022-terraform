@@ -6,10 +6,10 @@ title: Creating an SLI
 tabs:
 - title: Shell
   type: terminal
-  hostname: container
+  hostname: host
 - title: Editor
   type: code
-  hostname: container
+  hostname: host
   path: /home/terraform
 difficulty: basic
 timelimit: 600
