@@ -41,9 +41,6 @@ var env_config = {
   var quantity = "6"
   addMultiplePlansToCart();
 
-  //checkout process - zero's out cart
-  buyNow();
-
   //------------------------------
   // Helper functions
   //------------------------------
@@ -165,20 +162,4 @@ var env_config = {
             });
           });
       });
-  }
-
-  function buyNow() {
-    return $browser.findElement(By.id("shoppingcart")).click().then(function() {
-      $browser.waitForAndFindElement(By.className("simpleCart_checkout"), 10000).then(function() {
-        return $browser.findElement(By.className("simpleCart_checkout")).click().then(function() {
-          console.log("Purchased cart contents")
-          return $browser.sleep(2000).then(function() {
-            emptyCart();
-          });
-        });
-      }, function (err) {
-        $browser.takeScreenshot();
-        assert.ok(false,"Unable to locate checkout button");
-      });
-    });
   }

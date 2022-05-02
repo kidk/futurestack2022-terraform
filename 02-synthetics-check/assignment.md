@@ -25,17 +25,17 @@ You can set the location to `AWS_US_EAST_1` and the `frequency` to 5 minutes.
 
 Tasks:
 1) Create a simple check for `http://webportal.telco.nrdemo.com/`
-2) Create a browser check for `http://webportal.telco.nrdemo.com/browse/phones` with `verify_ssl` enabled
+2) Create a browser check for `http://webportal.telco.nrdemo.com/browse/phones`
 3) Create a script check with the `example.js` script in the `/home/terraform/` folder
 
 Feel free to add other options to simple and browser check like: `validation_string`, and `sla_threshold`.
 
 Documentation:
 - [synthetics_monitor](https://registry.terraform.io/providers/newrelic/newrelic/latest/docs/resources/synthetics_monitor)
-- [newrelic_synthetics_monitor_script](https://registry.terraform.io/providers/newrelic/newrelic/latest/docs/resources/synthetics_monitor_script)
+- [synthetics_monitor_script](https://registry.terraform.io/providers/newrelic/newrelic/latest/docs/resources/synthetics_monitor_script)
 
 If you get stuck, you can always take a quick view at the `reference/02-synthetics-check/synthetics.tf` file.
 
-If you've configured everything you can test your set up with `terraform plan` and `terraform apply`.
+If you've configured everything you can test your set up with `terraform plan` and `terraform apply`. Make sure to check out the result of your work in [New Relic](https://one.newrelic.com/synthetics-nerdlets)
 
 Once you're done you can click on 'Check' (bottom right of your screen) to continue.

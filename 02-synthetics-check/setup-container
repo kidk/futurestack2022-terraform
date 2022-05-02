@@ -4,3 +4,7 @@ set -euxo pipefail
 # Add script file
 curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/02-synthetics-check/example.js -o /home/terraform/example.js
 curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/02-synthetics-check/synthetics.tf -o /home/terraform/synthetics.tf
+
+# Create reference folder
+mkdir -p /home/terraform/reference/02-synthetics-check/
+curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/02-synthetics-check/reference.tf -o /home/terraform/reference/02-synthetics-check/synthetics.tf
