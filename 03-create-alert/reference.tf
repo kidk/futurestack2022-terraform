@@ -19,6 +19,7 @@ resource "newrelic_nrql_alert_condition" "availability" {
     operator              = "equals"
     threshold             = 0
     threshold_duration    = 300
+    threshold_occurrences = "all"
   }
 }
 
@@ -34,12 +35,14 @@ resource "newrelic_nrql_alert_condition" "performance" {
     operator              = "above"
     threshold             = 60
     threshold_duration    = 300
+    threshold_occurrences = "all"
   }
 
   warning {
     operator              = "above"
     threshold             = 60
     threshold_duration    = 300
+    threshold_occurrences = "all"
   }
 }
 
@@ -55,5 +58,6 @@ resource "newrelic_nrql_alert_condition" "errors" {
     operator              = "above"
     threshold             = 0
     threshold_duration    = 300
+    threshold_occurrences = "all"
   }
 }

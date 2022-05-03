@@ -2,10 +2,14 @@ slug: automating-observability-with-new-relic
 id: ld6sazyowly7
 type: track
 title: Automating Observability with New Relic
-teaser: Get started quickly with a single container-based sandbox host
-description: Get started quickly with a container-based sandbox host. Choose a container
-  when you need a fast, lightweight Linux system.
-icon: https://cdn.instruqt.com/assets/templates/ubuntu.png
+teaser: Learn Terraform, and how to use Terraform to configure New Relic
+description: Terraform allows you to configure a huge amount of services like AWS,
+  Azure, GCP, Cloudflare, and others all through code. New Relic also provides a extension
+  to Terraform so you can configure alerts, synthetics, dashboards, workloads, sli's
+  and other parts of the New Relic platform. During this workshop we will introduce
+  you to Terraform and New Relic, and how you can use them together to do amazing
+  things.
+icon: https://storage.googleapis.com/instruqt-frontend/img/tracks/default.png
 tags:
 - ""
 owner: newrelic
@@ -14,4 +18,4 @@ developers:
 - jbuchanan@newrelic.com
 private: true
 published: false
-checksum: "3085888699680909853"
+checksum: "8540805232248640614"

@@ -1,3 +1,7 @@
+#
+# Part 04: Dashboard
+#
+
 resource "newrelic_one_dashboard" "exampledash" {
   name = "New Relic Synthetics Example"
 
@@ -52,4 +56,9 @@ resource "newrelic_one_dashboard" "exampledash" {
       }
     }
   }
+}
+
+output "dashboard_url" {
+  description = "Url of the dashboard we created"
+  value       = newrelic_one_dashboard.exampledash.permalink
 }
