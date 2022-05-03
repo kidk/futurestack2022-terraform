@@ -1,0 +1,10 @@
+#!/bin/bash
+set -euxo pipefail
+
+CHECKS=$(grep "newrelic_one_dashboard\"" terraform.tfstate | wc -l)
+if ! [ "$CHECKS" -ge 1 ]; then
+     fail-message "We didn't find a dashboard, check out reference file if you're stuck"
+     exit 1
+fi
+
+exit 0

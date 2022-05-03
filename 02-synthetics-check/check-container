@@ -3,16 +3,14 @@ set -euxo pipefail
 
 CHECKS=$(grep "newrelic_synthetics_monitor\"" terraform.tfstate | wc -l)
 if ! [ "$CHECKS" -ge 3 ]; then
-     fail-message "We didn't find enough synthetics monitors, check out reference file if you're stuck"
+     fail-message "We didn't find enough synthetics monitors (expecting 3), check out reference file if you're stuck"
      exit 1
 fi
 
 CHECKS=$(grep "newrelic_synthetics_monitor_script\"" terraform.tfstate | wc -l)
 if ! [ "$CHECKS" -ge 1 ]; then
-     fail-message "We didn't find enough synthetics monitor scripts, check out reference file if you're stuck"
+     fail-message "We didn't find enough synthetics monitor scripts (expecting 1), check out reference file if you're stuck"
      exit 1
 fi
 
 exit 0
-
-

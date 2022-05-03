@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euxo pipefail
+
+CHECKS=$(grep "newrelic_nrql_alert_condition\"" terraform.tfstate | wc -l)
+if ! [ "$CHECKS" -ge 3 ]; then
+     fail-message "We didn't find enough alert conditions (expecting 3), check out reference file if you're stuck"
+     exit 1
+fi
+
+CHECKS=$(grep "newrelic_alert_policy\"" terraform.tfstate | wc -l)
+if ! [ "$CHECKS" -ge 1 ]; then
+     fail-message "We didn't find enough alert policies (expecting 1), check out reference file if you're stuck"
+     exit 1
+fi
+
+exit 0

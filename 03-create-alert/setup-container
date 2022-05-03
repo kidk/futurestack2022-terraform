@@ -1,0 +1,9 @@
+#!/bin/bash
+set -euxo pipefail
+
+# Add script file
+curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/03-create-alert/alerts.tf -o /home/terraform/alerts.tf
+
+# Create reference folder
+mkdir -p /home/terraform/reference/03-create-alert/
+curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/03-create-alert/reference.tf -o /home/terraform/reference/03-create-alert/alerts.tf

@@ -1,0 +1,9 @@
+#!/bin/bash
+set -euxo pipefail
+
+# Add script file
+curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/04-dashboard/dashboard.tf -o /home/terraform/dashboard.tf
+
+# Create reference folder
+mkdir -p /home/terraform/reference/04-dashboard/
+curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/04-dashboard/reference.tf -o /home/terraform/reference/04-dashboard/dashboard.tf
