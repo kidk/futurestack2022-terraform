@@ -24,6 +24,8 @@ Setting up Terraform
 
 Welcome to the hands on New Relic with Terraform workshop. We will guide you in creating you first Terraform resources. During this workshop you will learn to create alerts, synthetic checks, dashboards and SLI's all automated and generated through Terraform. If you're new to Terraform you will learn some key concepts you will be able to use with other providers.
 
+To complete this workshop you will need a New Relic account, if you don't have on already you can create it on https://newrelic.com/signup
+
 The first step in using Terraform is setting up the providers with the right credentials. Open `providers.tf` in the local editor (Tab in top left of your screen) to learn more about the providers.
 
 ![Editor pane](https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/01-terraform-set-up/editor.png)
