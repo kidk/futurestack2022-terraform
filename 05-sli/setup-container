@@ -1,0 +1,9 @@
+#!/bin/bash
+set -euxo pipefail
+
+# Add script file
+curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/05-sli/sli.tf -o /home/terraform/sli.tf
+
+# Create reference folder
+mkdir -p /home/terraform/reference/05-sli/
+curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/05-sli/reference.tf -o /home/terraform/reference/05-sli/sli.tf

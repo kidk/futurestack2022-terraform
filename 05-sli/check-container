@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euxo pipefail
+
+CHECKS=$(grep "newrelic_entity\"" terraform.tfstate | wc -l)
+if ! [ "$CHECKS" -ge 1 ]; then
+     fail-message "We didn't find an entity data source, check out reference file if you're stuck"
+     exit 1
+fi
+
+CHECKS=$(grep "newrelic_service_level\"" terraform.tfstate | wc -l)
+if ! [ "$CHECKS" -ge 1 ]; then
+     fail-message "We didn't find service level, check out reference file if you're stuck"
+     exit 1
+fi
+
+exit 0
