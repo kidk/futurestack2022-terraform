@@ -10,12 +10,13 @@ description: Terraform allows you to configure a huge amount of services like AW
   you to Terraform and New Relic, and how you can use them together to do amazing
   things.
 icon: https://storage.googleapis.com/instruqt-frontend/img/tracks/default.png
+level: beginner
 tags:
 - ""
 owner: newrelic
 developers:
 - svandamme@newrelic.com
 - jbuchanan@newrelic.com
-private: true
+private: false
 published: false
-checksum: "5879633223015681441"
+checksum: "13418578368381343049"

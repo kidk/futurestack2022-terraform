@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euxo pipefail
+
+# Create modules directory
+mkdir -p /home/terraform/modules/website-monitoring/
+
+# Move all tf files into that directory
+mv /home/terraform/*.tf /home/terraform/modules/website-monitoring/
+
+# Create new modules file
+curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/06-modules/variables.tf -o /home/terraform/modules/website-monitoring/variables.tf
+curl https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/06-modules/modules.tf -o /home/terraform/modules.tf
