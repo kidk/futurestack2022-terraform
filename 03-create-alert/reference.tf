@@ -51,7 +51,7 @@ resource "newrelic_nrql_alert_condition" "errors" {
   name                           = "Website errors"
 
   nrql {
-    query = "SELECT count(*) FROM SyntheticCheck WHERE error IS NOT NULL"
+    query = "SELECT count(*) FROM SyntheticCheck WHERE error IS NOT NULL WHERE monitorName = '${newrelic_synthetics_monitor.browser.name}'"
   }
 
   critical {
