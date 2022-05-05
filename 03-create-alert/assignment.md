@@ -19,7 +19,7 @@ Now that we have some checks running against our website it would be great if we
 
 To cover all of our alert cases we need 3 types of alerts:
 
-1) Check if the website is available: SELECT count(*) FROM SyntheticCheck FACET monitorName
+1) Check if the website is available: SELECT count(*) from SyntheticCheck where result='FAILED' facet monitorName
 2) Check if the website is performing well: SELECT average(duration) FROM SyntheticCheck FACET monitorName
 3) Check if we have any errors: SELECT count(*) FROM SyntheticCheck WHERE error IS NOT NULL FACET monitorName
 

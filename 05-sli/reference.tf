@@ -6,7 +6,7 @@ data "newrelic_entity" "synthetics_check" {
 }
 
 resource "newrelic_service_level" "website-availability" {
-    guid = newrelic_entity.synthetics_check.guid
+    guid = data.newrelic_entity.synthetics_check.guid
     name = "Website availability"
     description = "Availability of the checkout flow"
 

@@ -33,7 +33,7 @@ resource "newrelic_one_dashboard" "exampledash" {
     }
 
     widget_line {
-      title = "Success Percentage By Location"
+      title = "Average Duration By Monitor"
       row = 4
       column = 1
       width = 6

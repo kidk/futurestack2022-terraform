@@ -21,7 +21,7 @@ To be able to do so, we will need a GUID for one of our Synthetic checks. As the
 
 For this use case we are going to use [entity](https://registry.terraform.io/providers/newrelic/newrelic/latest/docs/data-sources/entity). Create an entity by looking up the name of your synthetic check, with `domain` set to `SYNTH` and `type` set to `MONITOR`. Tip use resource reference like we did for the dashboard url (`newrelic_synthetics_monitor.{name of check}.name`).
 
-Next up we want to use [service_level](https://registry.terraform.io/providers/newrelic/newrelic/latest/docs/resources/service_level) resource. Take a look at the example, and try to figure out how to configure it. You can now use the entity information you've fetched with `data.newrelic_entity.guid`. Below is a list of variables you can use, feel free to play with them if you want.
+Next up we want to use [service_level](https://registry.terraform.io/providers/newrelic/newrelic/latest/docs/resources/service_level) resource. Take a look at the example, and try to figure out how to configure it. You can now use the entity information you've fetched with `data.newrelic_entity.{name}.guid`. Below is a list of variables you can use, feel free to play with them if you want.
 
 - account_id: `var.NEW_RELIC_CHECK_ACCOUNT_ID`
 - valid_events

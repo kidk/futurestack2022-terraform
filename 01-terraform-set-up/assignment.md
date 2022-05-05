@@ -26,7 +26,7 @@ Welcome to the hands on New Relic with Terraform workshop. We will guide you in 
 
 To complete this workshop you will need a New Relic account, if you don't have on already you can create it on https://newrelic.com/signup
 
-The first step in using Terraform is setting up the providers with the right credentials. Open `providers.tf` in the local editor (Tab in top left of your screen) to learn more about the providers.
+The first step in using Terraform is setting up the providers with the right credentials. Open `providers.tf` in the local editor (Tab in top left of your screen) and review the contents of the file to understand how providers in Terraform work, and how you can configure Terraform to use them.
 
 ![Editor pane](https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/01-terraform-set-up/editor.png)
 
@@ -34,7 +34,7 @@ When using the editor it could be that keyboard shortcuts like `CMD + S` or `CTR
 
 ![Save icon](https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/01-terraform-set-up/save.png)
 
-Once you're done with `providers.tf`, open the `configuration.sh` file to set up the right credentials for communicating with the New Relic API.
+Once you're done with `providers.tf`, open the `configuration.sh` file and follow in the instructions to generate API key credentials for allowing Terraform to communicate with the New Relic API.
 
 After changing your credentials in `configuration.sh`, go back to the shell using tabs on top of the screen and run the following commands to validate your configuration. If you get any errors, double check the configuration.sh file.
 
