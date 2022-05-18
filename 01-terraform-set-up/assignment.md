@@ -22,7 +22,7 @@ timelimit: 600
 Setting up Terraform
 ==============
 
-Welcome to the hands on New Relic with Terraform workshop. We will guide you in creating you first Terraform resources. During this workshop you will learn to create alerts, synthetic checks, dashboards and SLI's all automated and generated through Terraform. If you're new to Terraform you will learn some key concepts you will be able to use with other providers.
+Welcome to the hands on workshop for New Relic and Terraform. We will guide you in creating you first Terraform resources. During this workshop you will learn to create alerts, synthetic checks, dashboards and SLI's all automated and generated through Terraform. If you're new to Terraform you will learn some key concepts you will be able to use with other providers.
 
 To complete this workshop you will need a New Relic account, if you don't have on already you can create it on https://newrelic.com/signup
 
@@ -34,7 +34,7 @@ When using the editor it could be that keyboard shortcuts like `CMD + S` or `CTR
 
 ![Save icon](https://raw.githubusercontent.com/kidk/futurestack2022-terraform/main/01-terraform-set-up/save.png)
 
-Once you're done with `providers.tf`, open the `configuration.sh` file and follow in the instructions to generate API key credentials for allowing Terraform to communicate with the New Relic API.
+Once you're done with `providers.tf`, open the `configuration.sh` file and follow the instructions to generate API key credentials for allowing Terraform to communicate with the New Relic API.
 
 After changing your credentials in `configuration.sh`, go back to the shell using tabs on top of the screen and run the following commands to validate your configuration. If you get any errors, double check the configuration.sh file.
 
