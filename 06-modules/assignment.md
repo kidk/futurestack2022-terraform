@@ -19,14 +19,14 @@ Again great work! We now have an SLI that will tell us exactly how the website i
 
 Bad news though, our boss was so happy with our work, they now want to do the same for 10 others websites: https://www.newrelic.com, https://docs.newrelic.com/, https://opensource.newrelic.com/, https://developer.newrelic.com/, https://www.google.com, https://www.terraform.io/, https://github.com/, https://www.microsoft.com/, https://about.gitlab.com/, https://www.pulumi.com/
 
-Well, better get to work copy pasting all of our code, again and again to so we can monitor everything. But what if there's a better way: [Modules!](https://www.terraform.io/language/modules) Modules are containers for multiple resources that are used together, and are the go to way to package and reuse resource configurations in Terraform.
+Well, better get to work copy pasting all of our code, again and again so we can monitor everything. But what if there's a better way: [Modules!](https://www.terraform.io/language/modules) Modules are containers for multiple resources that are used together, and are an excellent way to package and reuse resource configurations in Terraform.
 
-We moved all of our code into a modules directory `modules/website-monitoring/` and added `modules.tf` file with some pre-configured configuration. Take a look at both files.
+We moved all of our code into a modules directory `modules/website-monitoring/` and added a `modules.tf` file with some pre-configured configuration. Take a look at both files.
 
 Your task is now to:
 - Open `modules/website-monitoring/variable.tf` and define the `website` variable as [input variable](https://www.terraform.io/language/values/variables) for this config.
-- Change the `modules/website-monitoring/synthetics.tf` file so it only contains a simple check, and uses the website variable. It's ok to remove the other checks.
-- Review all other Terraform files so they use references to other resources and not hard coded values. Example: `data.newrelic_entity.{name}.guid` instead of `1a49a53e-a75a-4268-8141-db1d538284e0`.
+- Change the `modules/website-monitoring/synthetics.tf` file so it only contains a simple check, and uses the website variable so the website is no longer hardcoded. It's ok to remove the other checks.
+- Review all other Terraform files so they use references to other resources and not hard coded values. Example: `data.newrelic_entity.{name}.guid` instead of `1a49a53e-a75a-4268-8141-db1d538284e0`. This is a challenge, so don't worry if you miss any. The great thing about Terraform is that it's all easy to fix.
 
 If you're ready, run `terraform init` again so Terraform initialises our module, and after `terraform apply`. Make sure to review your changes so it matches up with your expecations. You can also always check in New Relic if you're getting everything you need. If you spot a mistake, it's sometimes best to do a `terraform destroy` before making the changes.
 
