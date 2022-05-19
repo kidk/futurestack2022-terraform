@@ -33,6 +33,6 @@ If you get stuck, you can always take a quick view at the `reference/03-create-a
 
 If you've configured everything you can test your set up with `terraform plan` and `terraform apply`. Make sure to check out the result of your work in [New Relic](https://one.newrelic.com/nrai/alerts-classic/policies)
 
-Challenge: The alerts above will work on all Synthetics checks that run in your accounts because of the `FACET monitorName` in the NRQL query. What if we want to only run it on the Synthetics check we created with Terraform? In addition what if we don't want to hardcode the value of the Synthetics check name? Hint: `newrelic_synthetics_monitor.{name of resource}.name` in combination with `WHERE monitorName = ''` for the query should get you started.
+Challenge: The alerts above will work on all Synthetics checks that run in your accounts because of the `FACET monitorName` in the NRQL query. What if we want to only run it on the Synthetics check we created with Terraform? In addition what if we don't want to hardcode the value of the Synthetics check name? Hint: Use [references](https://www.terraform.io/language/expressions/references) like `newrelic_synthetics_monitor.{name of resource}.name` in combination with `WHERE monitorName = ''` for the query should get you started.
 
 Once you're done you can click on 'Check' (bottom right of your screen) to continue.

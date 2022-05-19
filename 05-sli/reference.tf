@@ -1,6 +1,6 @@
 
 data "newrelic_entity" "synthetics_check" {
-  name = newrelic_synthetics_monitor.browser.name
+  name = newrelic_synthetics_monitor.simple.name
   domain = "SYNTH"
   type = "MONITOR"
 }

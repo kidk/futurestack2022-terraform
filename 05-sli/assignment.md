@@ -15,9 +15,9 @@ difficulty: basic
 timelimit: 600
 ---
 
-Great work! We now have a dashboard, alert, and synthetics check for our important website. Bad news though, our boss just called and management wants to set an SLI for the website, to prove to our customers that we're hitting our goals.
+Great work! We now have a dashboard, alert, and synthetics check for our website. Bad news though, our boss just called and management wants to set an SLI for the website, to prove to our customers that we're hitting our goals.
 
-To be able to do so, we will need a GUID for one of our Synthetic checks. As the checkout check is the most important let's choose that one. We will use the data sources feature of Terraform to get this information. Data sources are a handy feature if you want to get data from somewhere, without making changes. Like in our case we want the Synthetics check information, but we don't want to make changes.
+To be able to do so, we will need a GUID for one of our Synthetic checks. Let's use the `simple` check for this, as it should give us the true uptime of our website. We will use the data sources feature of Terraform to get this information. Data sources are a handy feature if you want to get data from somewhere, without making changes. Like in our case we want the Synthetics check information, but we don't want to make changes to the check itself. You can also use data resources if you don't want to manage the state of something in Terraform.
 
 For this use case we are going to use [entity](https://registry.terraform.io/providers/newrelic/newrelic/latest/docs/data-sources/entity). Create an entity by looking up the name of your synthetic check, with `domain` set to `SYNTH` and `type` set to `MONITOR`. Tip use resource reference like we did for the dashboard url (`newrelic_synthetics_monitor.{name of check}.name`).
 

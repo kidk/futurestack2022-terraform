@@ -36,6 +36,6 @@ output "dashboard_url" {
 }
 ```
 
-Don't forget to replace `{name}` before `terraform apply`. The `{name}` comes from the resource, so for example `resource "newrelic_one_dashboard" "exampledash"` will have the name `exampledash`. You can change this name to anything. It's a great way to reference other resources within Terraform.
+Don't forget to replace `{name}` before `terraform apply`. The `{name}` comes from the resource, so for example `resource "newrelic_one_dashboard" "exampledash"` will have the name `exampledash`. You can change this name to anything. It's a great way to [reference other resources within Terraform](https://www.terraform.io/language/expressions/references).
 
 Once you're done and happy you can click on 'Check' (bottom right of your screen) to continue.
