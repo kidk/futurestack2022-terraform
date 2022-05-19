@@ -1,5 +1,5 @@
 #
-# Part 05: Modules
+# Part 06: Modules
 #
 
 variable "website" {
