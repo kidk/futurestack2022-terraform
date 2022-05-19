@@ -17,7 +17,7 @@ timelimit: 600
 
 Again great work! We now have an SLI that will tell us exactly how the website is performing, and we can use that to prove to our customers that everything is working as expected.
 
-Bad news though, our boss was so happy with our work, they now want to do the same for 10 others websites: https://www.newrelic.com, https://docs.newrelic.com/, https://opensource.newrelic.com/, https://developer.newrelic.com/, https://www.google.com, https://www.terraform.io/, https://github.com/, https://www.microsoft.com/, https://about.gitlab.com/, https://www.pulumi.com/
+Bad news though, our boss was so happy with our work, they now want to do the same for 4 others websites: https://www.newrelic.com, https://docs.newrelic.com/, https://opensource.newrelic.com/, https://developer.newrelic.com/
 
 Well, better get to work copy pasting all of our code, again and again so we can monitor everything. But what if there's a better way: [Modules!](https://www.terraform.io/language/modules) Modules are containers for multiple resources that are used together, and are an excellent way to package and reuse resource configurations in Terraform.
 

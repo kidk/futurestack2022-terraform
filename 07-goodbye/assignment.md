@@ -2,7 +2,7 @@
 slug: goodbye
 id: ioyr229ajuxb
 type: challenge
-title: Goodbye
+title: Good work!
 tabs:
 - title: Shell
   type: terminal

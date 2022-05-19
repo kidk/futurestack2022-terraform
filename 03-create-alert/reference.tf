@@ -60,7 +60,7 @@ resource "newrelic_nrql_alert_condition" "errors" {
   violation_time_limit_seconds   = 259200
 
   nrql {
-    query = "SELECT count(*) FROM SyntheticCheck WHERE error IS NOT NULL WHERE monitorName = '${newrelic_synthetics_monitor.browser.name}'"
+    query = "SELECT count(*) FROM SyntheticCheck WHERE error IS NOT NULL WHERE monitorName = '${newrelic_synthetics_monitor.simple.name}'"
   }
 
   critical {

@@ -1,3 +1,6 @@
+#
+# Part 05: SLI
+#
 
 data "newrelic_entity" "synthetics_check" {
   name = newrelic_synthetics_monitor.simple.name

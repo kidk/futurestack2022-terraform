@@ -2,62 +2,40 @@
 # Part 06: Modules
 #
 
-module "website-monitoring" {
+variable "NEW_RELIC_CHECK_ACCOUNT_ID" {}
+
+module "website-monitoring-newrelic" {
   source = "./modules/website-monitoring"
 
   website = "https://www.newrelic.com"
+
+  # We pass through the account ID to use it later
+  NEW_RELIC_CHECK_ACCOUNT_ID = var.NEW_RELIC_CHECK_ACCOUNT_ID
 }
 
-module "website-monitoring" {
+module "website-monitoring-newrelic-docs" {
   source = "./modules/website-monitoring"
 
   website = "https://docs.newrelic.com/"
+
+  # We pass through the account ID to use it later
+  NEW_RELIC_CHECK_ACCOUNT_ID = var.NEW_RELIC_CHECK_ACCOUNT_ID
 }
 
-module "website-monitoring" {
+module "website-monitoring-newrelic-opensource" {
   source = "./modules/website-monitoring"
 
   website = "https://opensource.newrelic.com/"
+
+  # We pass through the account ID to use it later
+  NEW_RELIC_CHECK_ACCOUNT_ID = var.NEW_RELIC_CHECK_ACCOUNT_ID
 }
 
-module "website-monitoring" {
+module "website-monitoring-newrelic-developer" {
   source = "./modules/website-monitoring"
 
   website = "https://developer.newrelic.com/"
-}
 
-module "website-monitoring" {
-  source = "./modules/website-monitoring"
-
-  website = "https://www.google.com"
-}
-
-module "website-monitoring" {
-  source = "./modules/website-monitoring"
-
-  website = "https://www.terraform.io/"
-}
-
-module "website-monitoring" {
-  source = "./modules/website-monitoring"
-
-  website = "https://github.com/"
-}
-
-module "website-monitoring" {
-  source = "./modules/website-monitoring"
-
-  website = "https://www.microsoft.com/"
-}
-
-module "website-monitoring" {
-  source = "./modules/website-monitoring"
-
-  website = "https://about.gitlab.com/"
-}
-
-module "website-monitoring" {
-  source = "./modules/website-monitoring"
-
-  website = "https://www.pulumi.com/"
+  # We pass through the account ID to use it later
+  NEW_RELIC_CHECK_ACCOUNT_ID = var.NEW_RELIC_CHECK_ACCOUNT_ID
 }
